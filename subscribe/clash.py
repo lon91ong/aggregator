@@ -731,11 +731,11 @@ def check(proxy: dict, api_url: str, timeout: int, test_url: str, delay: int, st
                         if data.get("delay", -1) > 0:
                             proxy["name"] = f"{proxy_name}{utils.CHATGPT_FLAG}"
                 except Exception:
-                    logger.debug(f"check for OpenAI failed, proxy: {proxy.get("name")}, message: {str(e)}")
+                    logger.debug(f'check for OpenAI failed, proxy: {proxy.get("name")}, message: {str(e)}')
 
         return alive
     except Exception as e:
-        logger.debug(f"check failed, proxy: {proxy.get("name")}, message: {str(e)}")
+        logger.debug(f'check failed, proxy: {proxy.get("name")}, message: {str(e)}')
         return False
 
 
